@@ -5,16 +5,17 @@ import React from 'react'
 type Prop = {
     href: string,
     text: string,
-    title: string
+    title: string,
+    image: string
   }
 
-export default function Card({ title,href,text }:Prop) {
+export default function Card({ title,href,text,image }:Prop) {
     return (
       <div className="bg-gray-100 p-4 m-10 rounded-md text-center">
         <Link href={href}>
             <div className='flex items-center'>
             <Image
-      src="/onlytodo.png"
+      src={image}
       width={90}
       height={90}
       alt="Picture of the author"
